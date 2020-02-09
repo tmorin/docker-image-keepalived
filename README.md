@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tmorin/docker-image-keepalived.svg)](https://travis-ci.org/tmorin/docker-image-keepalived)
+
 # docker-image-keepalived
 
 Provide a Docker image running [keepalived](https://keepalived.org/) which is highly inspired by the project [osixia/docker-keepalived](https://github.com/osixia/docker-keepalived).

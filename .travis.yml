@@ -1,0 +1,19 @@
+language: generic
+arch:
+  - amd64
+  - arm64
+services:
+  - docker
+env:
+  global:
+    - keepalived_version="2.0.20"
+    - tag_image="thibaultmorin/keepalived"
+    - tag_version="$keepalived_version-$TRAVIS_CPU_ARCH"
+    - tag="$tag_image:$tag_version"
+before_install: ./scripts/before_install.sh
+script: ./scripts/build.sh
+jobs:
+  include:
+    - stage: manifest
+      script: ./scripts/manifest.sh
+
