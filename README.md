@@ -13,3 +13,13 @@ Provide a Docker image running [keepalived](https://keepalived.org/) which is hi
 - `KEEPALIVED_UNICAST_PEERS`:  Keepalived unicast peers. Default value `192.168.1.10,192.168.1.11`
 - `KEEPALIVED_VIRTUAL_IPS`:  Keepalived virtual IPs. Default value `192.168.1.231,192.168.1.232`
 - `KEEPALIVED_NOTIFY`:  Script to execute when node state change. Default value `/notify.sh`
+
+## Usage
+
+```bash
+docker run -d --name keepalived --restart=always \
+    --cap-add=NET_ADMIN --net=host \
+    -e KEEPALIVED_VIRTUAL_IPS="192.168.0.99" \
+    -e KEEPALIVED_UNICAST_PEERS="192.168.0.100,192.168.0.101,192.168.0.102" \
+    thibaultmorin/keepalived
+```
