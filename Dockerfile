@@ -1,7 +1,13 @@
 FROM alpine:3.11 as build
-
-# Keepalived version
 ARG version=2.0.20
+ARG vcs_ref
+ARG build_data
+LABEL org.label-schema.schema-version="1.0" \
+      org.label-schema.vendor=tmorin \
+      org.label-schema.license=mit \
+      org.label-schema.build-date="$build_data" \
+      org.label-schema.vcs-ref="$vcs_ref" \
+      org.label-schema.vcs-url="https://github.com/tmorin/docker-image-keepalived"
 
 ENV LANG="en_US.UTF-8" \
     LANGUAGE="en_US:en" \
