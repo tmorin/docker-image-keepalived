@@ -7,7 +7,7 @@ services:
 env:
   global:
     - keepalived_version="2.0.20"
-    - vcf_ref="$TRAVIS_COMMIT"
+    - vcs_ref="$TRAVIS_COMMIT"
     - tag_image="thibaultmorin/keepalived"
     - tag_version="$keepalived_version-$TRAVIS_CPU_ARCH"
     - tag="$tag_image:$tag_version"
