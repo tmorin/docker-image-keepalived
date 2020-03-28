@@ -25,11 +25,11 @@ RUN curl -o keepalived.tar.gz -SL http://keepalived.org/software/keepalived-${ve
 
 FROM alpine:3.11
 ARG vcs_ref
-ARG build_data
+ARG build_date
 LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.vendor=tmorin \
       org.label-schema.license=MIT \
-      org.label-schema.build-date="$build_data" \
+      org.label-schema.build-date="$build_date" \
       org.label-schema.vcs-ref="$vcs_ref" \
       org.label-schema.vcs-url="https://github.com/tmorin/docker-image-keepalived"
 RUN apk --no-cache add --virtual runtime-dependencies \
