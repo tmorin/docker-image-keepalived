@@ -1,8 +1,8 @@
 name: Build
 on: [ push ]
 env:
-  DOCKER_VERSION_FULL: "2.0.20"
-  DOCKER_VERSION_MINOR: "2.0"
+  DOCKER_VERSION_FULL: "2.1.5"
+  DOCKER_VERSION_MINOR: "2.1"
   DOCKER_VERSION_MAJOR: "2"
 jobs:
 

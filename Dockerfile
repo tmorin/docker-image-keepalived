@@ -1,5 +1,5 @@
 FROM alpine:3.12 as build
-ARG version=2.0.20
+ARG version=2.1.5
 ENV LANG="en_US.UTF-8" \
     LANGUAGE="en_US:en" \
     LC_ALL="en_US.UTF-8"
@@ -44,9 +44,9 @@ RUN apk --no-cache add --virtual runtime-dependencies \
     libnl3 \
     libressl \
     file \
+    libmagic \
     net-snmp \
-    pcre2 \
-    libmagic
+    pcre2
 COPY --from=build /keepalived /
 COPY ./rootfs .
 CMD ["--log-detail", "--dump-conf", "--use-file", "/etc/keepalived/keepalived.alternative.conf"]
