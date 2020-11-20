@@ -1,10 +1,7 @@
 # docker-image-keepalived
 
-[![Build Status](https://travis-ci.org/tmorin/docker-image-keepalived.svg)](https://travis-ci.org/tmorin/docker-image-keepalived)
-[![](https://images.microbadger.com/badges/version/thibaultmorin/keepalived:latest.svg)](https://microbadger.com/images/thibaultmorin/keepalived:latest "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/image/thibaultmorin/keepalived:latest.svg)](https://microbadger.com/images/thibaultmorin/keepalived:latest "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/commit/thibaultmorin/keepalived:latest.svg)](https://microbadger.com/images/thibaultmorin/keepalived:latest "Get your own commit badge on microbadger.com")
-[![](https://images.microbadger.com/badges/license/thibaultmorin/keepalived.svg)](https://microbadger.com/images/thibaultmorin/keepalived "Get your own license badge on microbadger.com")
+![Build Images](https://github.com/tmorin/docker-image-keepalived/workflows/Build%20Images/badge.svg)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/thibaultmorin/keepalived?label=thibaultmorin%2Fkeepalived)](https://hub.docker.com/r/thibaultmorin/keepalived)
 
 Provide a Docker image running [keepalived](https://keepalived.org/) which is highly inspired by the project [osixia/docker-keepalived](https://github.com/osixia/docker-keepalived).
 
