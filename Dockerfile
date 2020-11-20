@@ -19,10 +19,10 @@ RUN apk --no-cache add --virtual build-dependencies \
     file-dev \
     net-snmp-dev \
     pcre2-dev
-RUN wget -O keepalived.tar.gz https://github.com/acassen/keepalived/archive/v${version}.tar.gz
-RUN mkdir -p /build
-RUN tar -xzf keepalived.tar.gz --strip 1 -C /build
-RUN cd /build \
+RUN wget -O keepalived.tar.gz https://github.com/acassen/keepalived/archive/v${version}.tar.gz \
+    && mkdir -p /build \
+    && tar -xzf keepalived.tar.gz --strip 1 -C /build \
+    && cd /build \
     && ./build_setup \
     && ./configure --disable-dynamic-linking --prefix=/keepalived \
     && make \
@@ -42,7 +42,11 @@ RUN apk --no-cache add --virtual runtime-dependencies \
     libnftnl \
     libnfnetlink \
     libnl3 \
-    libressl
+    libressl \
+    file \
+    net-snmp \
+    pcre2 \
+    libmagic
 COPY --from=build /keepalived /
 COPY ./rootfs .
 CMD ["--log-detail", "--dump-conf", "--use-file", "/etc/keepalived/keepalived.alternative.conf"]
