@@ -1,6 +1,6 @@
 # docker-image-keepalived
 
-![Build Images](https://github.com/tmorin/docker-image-keepalived/workflows/Build%20Images/badge.svg)
+![Build](https://github.com/tmorin/docker-image-keepalived/workflows/Build/badge.svg)
 [![Docker Image Version (latest semver)](https://img.shields.io/docker/v/thibaultmorin/keepalived?label=thibaultmorin%2Fkeepalived)](https://hub.docker.com/r/thibaultmorin/keepalived)
 
 Provide a Docker image running [keepalived](https://keepalived.org/) which is highly inspired by the project [osixia/docker-keepalived](https://github.com/osixia/docker-keepalived).
